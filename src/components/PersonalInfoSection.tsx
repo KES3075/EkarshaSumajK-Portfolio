@@ -2,13 +2,32 @@ import { DocumentSection, FormField } from './DocumentSection';
 import { RedactedText, TopSecretStamp } from './RedactedText';
 import { portfolioData } from '../data/portfolio';
 import { ExternalLink, Mail, Phone, Github, Linkedin } from 'lucide-react';
+import profileAvatar from '../assets/profile-avatar.jpg';
 
 export const PersonalInfoSection = () => {
   const { personalInfo } = portfolioData;
 
   return (
     <DocumentSection title="PERSONAL INFORMATION" classified={true}>
-      <div className="space-y-3">
+      <div className="flex gap-6">
+        {/* Profile Photo Section */}
+        <div className="flex-shrink-0">
+          <div className="w-32 h-32 border-2 border-primary bg-card relative overflow-hidden">
+            <RedactedText className="w-full h-full block">
+              <img 
+                src={profileAvatar} 
+                alt="Agent Profile Photo" 
+                className="w-full h-full object-cover"
+              />
+            </RedactedText>
+            <div className="absolute bottom-0 left-0 right-0 bg-primary text-primary-foreground text-xs text-center py-1">
+              AGENT PHOTO
+            </div>
+          </div>
+        </div>
+        
+        {/* Information Fields */}
+        <div className="flex-1 space-y-3">
         <FormField label="FULL NAME">
           <RedactedText className="font-semibold">
             {personalInfo.name}
@@ -86,6 +105,7 @@ export const PersonalInfoSection = () => {
               {personalInfo.bio}
             </RedactedText>
           </FormField>
+        </div>
         </div>
       </div>
     </DocumentSection>

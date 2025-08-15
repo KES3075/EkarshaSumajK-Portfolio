@@ -2,6 +2,7 @@ import { DocumentSection, FormField } from './DocumentSection';
 import { RedactedText, TopSecretStamp } from './RedactedText';
 import { portfolioData } from '../data/portfolio';
 import { Calendar, Building } from 'lucide-react';
+import fixityLogo from '../assets/fixity-logo.jpg';
 
 export const ExperienceSection = () => {
   const { experience } = portfolioData;
@@ -12,9 +13,20 @@ export const ExperienceSection = () => {
         {experience.map((exp) => (
           <div key={exp.id} className="border border-border p-4 bg-muted/5">
             <div className="flex items-center justify-between mb-3">
-              <div className="flex items-center gap-2">
-                <Building size={16} />
-                <span className="font-semibold uppercase tracking-wide">ASSIGNMENT #{exp.id}</span>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 border border-border bg-card overflow-hidden flex items-center justify-center">
+                  <RedactedText className="w-full h-full block">
+                    <img 
+                      src={fixityLogo} 
+                      alt="Organization Logo" 
+                      className="w-full h-full object-cover"
+                    />
+                  </RedactedText>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Building size={16} />
+                  <span className="font-semibold uppercase tracking-wide">ASSIGNMENT #{exp.id}</span>
+                </div>
               </div>
               <TopSecretStamp text="ACTIVE" />
             </div>

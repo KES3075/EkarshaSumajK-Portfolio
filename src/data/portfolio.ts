@@ -45,10 +45,26 @@ export const portfolioData = {
     {
       id: "1",
       name: "Agentic-AI-SaaS-Website-Builder",
-      description: "Developed a multi-agent AI system using Innget Agent Kit and Google Gemini 2.5 Flash to automate Next.js application generation, with specialized agents for code generation and project management.",
-      technologies: ["Next.js 15.3", "React 19", "TypeScript", "Tailwind CSS", "ShadowUI", "tRPC", "Prisma ORM", "PostgreSQL", "Clerk"],
+      description: "Developed AI-driven SaaS platform using Next.js 15.3.3, React 19, TypeScript, tRPC, and Google Gemini, automating code generation with real-time execution in E2B sandboxes. Engineered scalable tech stack with shadcn/ui, Tailwind CSS, Prisma ORM, PostgreSQL, and Clerk for supporting real-time chat and persistent storage.",
+      technologies: ["Next.js 15.3", "React 19", "TypeScript", "Tailwind CSS", "ShadowUI", "tRPC", "Prisma ORM", "PostgreSQL", "Clerk", "Google Gemini", "E2B"],
       github: "https://github.com/maxckes/SaaS-Agentic-AI-Website-Builder",
       demo: "https://saa-s-agentic-ai-website-builder-yv.vercel.app/"
+    },
+    {
+      id: "2",
+      name: "MCP-MONGO",
+      description: "Built MCP server for standardized MongoDB operations with more than 25 tools for connection, CRUD, and admin tasks using TypeScript and MongoDB driver. Implemented clean architecture with separated interface and MongoDB layer, including lazy connections, Zod validation, and robust error handling.",
+      technologies: ["TypeScript", "MongoDB", "Node.js", "Zod", "MCP Protocol", "Clean Architecture"],
+      github: "https://github.com/maxckes/MCP-MONGO",
+      demo: null
+    },
+    {
+      id: "3",
+      name: "Certificate-Generator",
+      description: "Built in-browser certificate generator using Next.js 15, React 19, TypeScript, Konva, and Clerk, enabling CSV data mapping and bulk PNG export via ZIP, generating 1,000+ certificates per batch. Integrated Tailwind CSS 4, Zustand, Prisma ORM, and jszip for responsive UI, in-memory state management, and scalable certificate generation with 100% data accuracy.",
+      technologies: ["Next.js 15", "React 19", "TypeScript", "Konva", "Clerk", "Tailwind CSS 4", "Zustand", "Prisma ORM", "jszip"],
+      github: "https://github.com/maxckes/Certificate-Generator",
+      demo: null
     }
   ],
   education: [
@@ -79,6 +95,12 @@ export const portfolioData = {
       name: "Oracle Cloud Infrastructure 2025 Generative AI Professional",
       issuer: "Oracle",
       url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=4765029D192E6D504F5F3A22F9AC5F732EF488B77E579C6262F5256A4EFC9A34"
+    },
+    {
+      id: "4",
+      name: "MongoDB Certified DBA Associate (C100DBA)",
+      issuer: "MongoDB",
+      url: "https://www.mongodb.com/certification"
     }
   ]
 };
