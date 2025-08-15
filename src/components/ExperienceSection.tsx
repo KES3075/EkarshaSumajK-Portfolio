@@ -33,7 +33,14 @@ export const ExperienceSection = () => {
             
             <FormField label="ORGANIZATION">
               <RedactedText className="font-semibold">
-                {exp.company}
+                <a 
+                  href={exp.website} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors underline"
+                >
+                  {exp.company}
+                </a>
               </RedactedText>
             </FormField>
             

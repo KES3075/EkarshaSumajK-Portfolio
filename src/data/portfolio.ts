@@ -35,6 +35,7 @@ export const portfolioData = {
     {
       id: "1",
       company: "Fixity Learning Pad",
+      website: "https://fixitylearningpad.com",
       position: "Full Stack Web Developer",
       period: "August 2024 - Present",
       description: "Developed production-grade APIs using FastAPI with AI service integration for predictive analytics and automated workflows, supporting scalable full-stack educational solutions. Built responsive UI/UX interfaces using React, Next.js, and Tailwind CSS.",
@@ -56,7 +57,7 @@ export const portfolioData = {
       description: "Built MCP server for standardized MongoDB operations with more than 25 tools for connection, CRUD, and admin tasks using TypeScript and MongoDB driver. Implemented clean architecture with separated interface and MongoDB layer, including lazy connections, Zod validation, and robust error handling.",
       technologies: ["TypeScript", "MongoDB", "Node.js", "Zod", "MCP Protocol", "Clean Architecture"],
       github: "https://github.com/maxckes/MCP-MONGO",
-      demo: null
+      demo: "https://github.com/maxckes/MCP-MONGO#installation"
     },
     {
       id: "3",
@@ -64,7 +65,7 @@ export const portfolioData = {
       description: "Built in-browser certificate generator using Next.js 15, React 19, TypeScript, Konva, and Clerk, enabling CSV data mapping and bulk PNG export via ZIP, generating 1,000+ certificates per batch. Integrated Tailwind CSS 4, Zustand, Prisma ORM, and jszip for responsive UI, in-memory state management, and scalable certificate generation with 100% data accuracy.",
       technologies: ["Next.js 15", "React 19", "TypeScript", "Konva", "Clerk", "Tailwind CSS 4", "Zustand", "Prisma ORM", "jszip"],
       github: "https://github.com/maxckes/Certificate-Generator",
-      demo: null
+      demo: "https://github.com/maxckes/Certificate-Generator#demo"
     }
   ],
   education: [

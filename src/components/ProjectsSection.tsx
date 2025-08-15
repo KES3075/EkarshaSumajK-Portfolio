@@ -58,22 +58,20 @@ export const ProjectsSection = () => {
                 </RedactedText>
               </FormField>
               
-              {project.demo && (
-                <FormField label="DEMO">
-                  <RedactedText>
-                    <a 
-                      href={project.demo} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 hover:text-accent transition-colors"
-                    >
-                      <Eye size={14} />
-                      Live Operation
-                      <ExternalLink size={12} />
-                    </a>
-                  </RedactedText>
-                </FormField>
-              )}
+              <FormField label="DEMO">
+                <RedactedText>
+                  <a 
+                    href={project.demo} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 hover:text-accent transition-colors"
+                  >
+                    <Eye size={14} />
+                    Live Operation
+                    <ExternalLink size={12} />
+                  </a>
+                </RedactedText>
+              </FormField>
             </div>
           </div>
         ))}
