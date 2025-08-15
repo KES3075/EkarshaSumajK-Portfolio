@@ -7,7 +7,7 @@ export const portfolioData = {
     email: "ekarshaksumaj@gmail.com",
     github: "https://github.com/EkarshaSumajK",
     linkedin: "https://www.linkedin.com/in/ekarshasumajk",
-    portfolio: "https://ekarshak.dev",
+    portfolio: "https://ekarsha-sumaj-k-portfolio.vercel.app/",
     logo:"https://media.licdn.com/dms/image/v2/D5603AQHf6AykXKMNDQ/profile-displayphoto-scale_400_400/B56ZisjCF8H0Ag-/0/1755241522745?e=1758153600&v=beta&t=10as86kg-711LuP5wfsbwEz9HDovyVk9w8o5jTehqIw"
   },
   skills: [
@@ -50,7 +50,7 @@ export const portfolioData = {
       name: "Agentic-AI-SaaS-Website-Builder",
       description: "Developed AI-driven SaaS platform using Next.js 15.3.3, React 19, TypeScript, tRPC, and Google Gemini, automating code generation with real-time execution in E2B sandboxes. Engineered scalable tech stack with shadcn/ui, Tailwind CSS, Prisma ORM, PostgreSQL, and Clerk for supporting real-time chat and persistent storage.",
       technologies: ["Next.js 15.3", "React 19", "TypeScript", "Tailwind CSS", "ShadowUI", "tRPC", "Prisma ORM", "PostgreSQL", "Clerk", "Google Gemini", "E2B"],
-      github: "https://github.com/maxckes/SaaS-Agentic-AI-Website-Builder",
+      github: "https://github.com/EkarshaSumajK/SaaS-Agentic-AI-Website-Builder",
       demo: "https://saa-s-agentic-ai-website-builder-yv.vercel.app/"
     },
     {
@@ -58,7 +58,7 @@ export const portfolioData = {
       name: "MCP-MONGO",
       description: "Built MCP server for standardized MongoDB operations with more than 25 tools for connection, CRUD, and admin tasks using TypeScript and MongoDB driver. Implemented clean architecture with separated interface and MongoDB layer, including lazy connections, Zod validation, and robust error handling.",
       technologies: ["TypeScript", "MongoDB", "Node.js", "Zod", "MCP Protocol", "Clean Architecture"],
-      github: "https://github.com/maxckes/MCP-MONGO",
+      github: "https://github.com/EkarshaSumajK/MCP-MONGO",
       demo: "https://github.com/maxckes/MCP-MONGO#installation"
     },
     {
@@ -66,7 +66,7 @@ export const portfolioData = {
       name: "Certificate-Generator",
       description: "Built in-browser certificate generator using Next.js 15, React 19, TypeScript, Konva, and Clerk, enabling CSV data mapping and bulk PNG export via ZIP, generating 1,000+ certificates per batch. Integrated Tailwind CSS 4, Zustand, Prisma ORM, and jszip for responsive UI, in-memory state management, and scalable certificate generation with 100% data accuracy.",
       technologies: ["Next.js 15", "React 19", "TypeScript", "Konva", "Clerk", "Tailwind CSS 4", "Zustand", "Prisma ORM", "jszip"],
-      github: "https://github.com/maxckes/Certificate-Generator",
+      github: "https://github.com/EkarshaSumajK/Certificate-Generator",
       demo: "https://github.com/maxckes/Certificate-Generator#demo"
     }
   ],
