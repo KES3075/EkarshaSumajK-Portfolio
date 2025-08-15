@@ -61,7 +61,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Classified document theme colors
+				'classified-red': 'hsl(var(--classified-red))',
+				'redaction-bar': 'hsl(var(--redaction-bar))',
+				'document-bg': 'hsl(var(--document-bg))',
+				'stamp-red': 'hsl(var(--stamp-red))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
