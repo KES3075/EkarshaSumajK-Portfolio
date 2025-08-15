@@ -44,33 +44,37 @@ export const ProjectsSection = () => {
             
             <div className="border-t border-border pt-3 mt-3 flex gap-4">
               <FormField label="INTEL">
-                <RedactedText>
-                  <a 
+              <a 
                     href={project.github} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 hover:text-accent transition-colors"
                   >
+                <RedactedText>
+                  <div className="flex items-center gap-2 hover:text-accent transition-colors">
                     <Github size={14} />
                     Repository Access
                     <ExternalLink size={12} />
-                  </a>
-                </RedactedText>
+                    </div>
+                  </RedactedText>
+                </a>
               </FormField>
               
               <FormField label="DEMO">
-                <RedactedText>
-                  <a 
+              <a 
                     href={project.demo} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 hover:text-accent transition-colors"
                   >
+                <RedactedText>
+                  <div className="flex items-center gap-2 hover:text-accent transition-colors">
                     <Eye size={14} />
                     Live Operation
                     <ExternalLink size={12} />
-                  </a>
+                  </div>
                 </RedactedText>
+                </a>
               </FormField>
             </div>
           </div>

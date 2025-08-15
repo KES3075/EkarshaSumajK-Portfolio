@@ -2,7 +2,7 @@ import { DocumentSection, FormField } from './DocumentSection';
 import { RedactedText, ClassifiedStamp } from './RedactedText';
 import { portfolioData } from '../data/portfolio';
 import { GraduationCap, MapPin, Calendar } from 'lucide-react';
-import vitLogo from '../assets/vit-logo.jpg';
+
 
 export const EducationSection = () => {
   const { education } = portfolioData;
@@ -17,7 +17,7 @@ export const EducationSection = () => {
                 <div className="w-12 h-12 border border-border bg-card overflow-hidden flex items-center justify-center">
                   <RedactedText className="w-full h-full block">
                     <img 
-                      src={vitLogo} 
+                      src={edu.logo}
                       alt="Institution Logo" 
                       className="w-full h-full object-cover"
                     />
@@ -44,9 +44,11 @@ export const EducationSection = () => {
             </FormField>
             
             <FormField label="DURATION">
-              <RedactedText className="flex items-center gap-2">
-                <Calendar size={14} />
-                {edu.period}
+              <RedactedText>
+                <div className="flex items-center gap-2 hover:text-accent transition-colors">
+                  <Calendar size={14} />
+                  {edu.period}
+                </div>
               </RedactedText>
             </FormField>
             
@@ -57,9 +59,11 @@ export const EducationSection = () => {
             </FormField>
             
             <FormField label="LOCATION">
-              <RedactedText className="flex items-center gap-2">
-                <MapPin size={14} />
-                {edu.location}
+              <RedactedText>
+                <div className="flex items-center gap-2 hover:text-accent transition-colors">
+                  <MapPin size={14} />
+                  {edu.location}
+                </div>
               </RedactedText>
             </FormField>
           </div>

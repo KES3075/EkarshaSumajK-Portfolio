@@ -2,7 +2,6 @@ import { DocumentSection, FormField } from './DocumentSection';
 import { RedactedText, TopSecretStamp } from './RedactedText';
 import { portfolioData } from '../data/portfolio';
 import { Award, ExternalLink, Shield } from 'lucide-react';
-import securityBadge from '../assets/security-badge.jpg';
 
 export const CertificationsSection = () => {
   const { certifications } = portfolioData;
@@ -17,7 +16,7 @@ export const CertificationsSection = () => {
                 <div className="w-8 h-8 border border-border bg-card overflow-hidden flex items-center justify-center">
                   <RedactedText className="w-full h-full block">
                     <img 
-                      src={securityBadge} 
+                      src={cert.logo} 
                       alt="Security Badge" 
                       className="w-full h-full object-cover"
                     />
@@ -38,24 +37,29 @@ export const CertificationsSection = () => {
             </FormField>
             
             <FormField label="AUTHORITY">
-              <RedactedText className="flex items-center gap-2">
-                <Award size={14} />
-                {cert.issuer}
+              <RedactedText>
+                <div className="flex items-center gap-2 hover:text-accent transition-colors">
+                  <Award size={14} />
+                  {cert.issuer}
+                </div>
               </RedactedText>
             </FormField>
             
             <FormField label="VERIFICATION">
-              <RedactedText>
-                <a 
+            <a 
                   href={cert.url} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 hover:text-accent transition-colors"
-                >
+                >   
+              <RedactedText>
+                <div className="flex items-center gap-2 hover:text-accent transition-colors">
                   <ExternalLink size={14} />
                   Authentication Portal
-                </a>
-              </RedactedText>
+                  <ExternalLink size={12} />
+                </div>
+                </RedactedText>
+              </a>
             </FormField>
           </div>
         ))}

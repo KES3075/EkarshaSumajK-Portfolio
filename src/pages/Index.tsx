@@ -19,9 +19,9 @@ const Index = () => {
               </div>
               <div>
                 <h1 className="document-title mb-0 border-0 p-0 text-left">
-                  PERSONNEL DOSSIER
+                  KES
                 </h1>
-                <p className="text-sm text-muted-foreground mt-2">
+                <p className="text-sm  mt-2">
                   SECURITY CLASSIFICATION: TOP SECRET
                 </p>
               </div>
@@ -37,7 +37,7 @@ const Index = () => {
             <p className="text-sm text-center uppercase tracking-wider">
               ⚠️ UNAUTHORIZED ACCESS PROHIBITED ⚠️
             </p>
-            <p className="text-xs text-center mt-2 text-muted-foreground">
+            <p className="text-xs text-center mt-2 ">
               This document contains classified information. Hover over redacted sections to reveal content.
             </p>
           </div>
@@ -55,10 +55,10 @@ const Index = () => {
 
         {/* Document Footer */}
         <footer className="document-page p-6 mt-8 text-center">
-          <p className="text-xs text-muted-foreground">
+          <p className="text-xs ">
             END OF DOCUMENT - CLASSIFICATION LEVEL: TOP SECRET
           </p>
-          <p className="text-xs text-muted-foreground mt-2">
+          <p className="text-xs  mt-2">
             This portfolio was generated using classified document protocols.
           </p>
         </footer>

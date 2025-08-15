@@ -15,7 +15,7 @@ export const PersonalInfoSection = () => {
           <div className="w-32 h-32 border-2 border-primary bg-card relative overflow-hidden">
             <RedactedText className="w-full h-full block">
               <img 
-                src={profileAvatar} 
+                src={personalInfo.logo} 
                 alt="Agent Profile Photo" 
                 className="w-full h-full object-cover"
               />
@@ -41,62 +41,72 @@ export const PersonalInfoSection = () => {
           <TopSecretStamp text="SECURED" />
         </FormField>
         
-        <FormField label="PHONE">
-          <RedactedText className="flex items-center gap-2">
+        {/* <FormField label="PHONE">
+          <RedactedText className="flex flex-row items-center gap-2">
             <Phone size={14} />
             {personalInfo.phone}
           </RedactedText>
-        </FormField>
+        </FormField> */}
         
         <FormField label="EMAIL">
-          <RedactedText className="flex items-center gap-2">
-            <Mail size={14} />
-            {personalInfo.email}
+          <RedactedText>
+            <div className="flex items-center gap-2 hover:text-accent transition-colors">
+              <Mail size={14} />
+              {personalInfo.email}
+            </div>
           </RedactedText>
         </FormField>
         
         <FormField label="GITHUB">
-          <RedactedText>
-            <a 
+        <a 
               href={personalInfo.github} 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-accent transition-colors"
             >
+          <RedactedText>
+            <div className="flex items-center gap-2 hover:text-accent transition-colors">
               <Github size={14} />
               {personalInfo.github}
               <ExternalLink size={12} />
-            </a>
-          </RedactedText>
+            </div>
+            </RedactedText>
+          </a>
         </FormField>
         
         <FormField label="LINKEDIN">
-          <RedactedText>
-            <a 
+          <a 
               href={personalInfo.linkedin} 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-accent transition-colors"
             >
+            <RedactedText>
+            <div className="flex items-center gap-2 hover:text-accent transition-colors">
               <Linkedin size={14} />
               {personalInfo.linkedin}
               <ExternalLink size={12} />
+            </div>
+            </RedactedText>
             </a>
-          </RedactedText>
+          
         </FormField>
         
         <FormField label="PORTFOLIO">
-          <RedactedText>
-            <a 
+          <a 
               href={personalInfo.portfolio} 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-accent transition-colors"
             >
+            <RedactedText>
+            <div className="flex items-center gap-2 hover:text-accent transition-colors">
               {personalInfo.portfolio}
               <ExternalLink size={12} />
+            </div>
+            </RedactedText>
             </a>
-          </RedactedText>
+          
         </FormField>
         
         <div className="border-t border-border pt-3 mt-4">

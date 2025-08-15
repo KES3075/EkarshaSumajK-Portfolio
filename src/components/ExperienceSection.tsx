@@ -2,7 +2,6 @@ import { DocumentSection, FormField } from './DocumentSection';
 import { RedactedText, TopSecretStamp } from './RedactedText';
 import { portfolioData } from '../data/portfolio';
 import { Calendar, Building } from 'lucide-react';
-import fixityLogo from '../assets/fixity-logo.jpg';
 
 export const ExperienceSection = () => {
   const { experience } = portfolioData;
@@ -17,7 +16,7 @@ export const ExperienceSection = () => {
                 <div className="w-12 h-12 border border-border bg-card overflow-hidden flex items-center justify-center">
                   <RedactedText className="w-full h-full block">
                     <img 
-                      src={fixityLogo} 
+                      src={exp.logo || ''}
                       alt="Organization Logo" 
                       className="w-full h-full object-cover"
                     />
