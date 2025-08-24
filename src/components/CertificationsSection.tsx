@@ -11,7 +11,7 @@ export const CertificationsSection = () => {
       <div className="space-y-6">
         {certifications.map((cert) => (
           <div key={cert.id} className="border border-border p-4 bg-muted/5">
-            <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center justify-between mb-3 flex-col md:flex-row gap-4">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 border border-border bg-card overflow-hidden flex items-center justify-center">
                   <RedactedText className="w-full h-full block">

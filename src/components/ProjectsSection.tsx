@@ -42,7 +42,7 @@ export const ProjectsSection = () => {
               </div>
             </FormField>
             
-            <div className="border-t border-border pt-3 mt-3 flex gap-4">
+            <div className="border-t border-border pt-3 mt-3 flex flex-col md:flex-row gap-4">
               <FormField label="INTEL">
               <a 
                     href={project.github} 

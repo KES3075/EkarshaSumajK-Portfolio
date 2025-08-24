@@ -102,6 +102,10 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-mono;
+    background-image: 
+      linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
+    background-size: 20px 20px;
   }
 }
 
@@ -135,11 +139,11 @@ All colors MUST be HSL.
   
   /* Classification stamps */
   .classified-stamp {
-    @apply inline-block px-2 py-1 border-2 border-stamp-red text-stamp-red font-bold text-xs tracking-wider transform -rotate-12 select-none;
+    @apply inline-block px-3 py-1 border-4 border-stamp-red text-stamp-red font-bold text-sm tracking-widest transform -rotate-6 select-none shadow-md;
   }
   
   .top-secret-stamp {
-    @apply inline-block px-2 py-1 border-2 border-accent text-accent font-bold text-sm tracking-wider transform rotate-6 select-none;
+    @apply inline-block px-3 py-1 border-4 border-accent text-accent font-bold text-sm tracking-widest transform rotate-6 select-none shadow-md;
   }
   
   /* Hover reveal animations */

@@ -3,22 +3,26 @@ import { RedactedText, TopSecretStamp } from './RedactedText';
 import { portfolioData } from '../data/portfolio';
 import { ExternalLink, Mail, Phone, Github, Linkedin } from 'lucide-react';
 import profileAvatar from '../assets/profile-avatar.jpg';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export const PersonalInfoSection = () => {
   const { personalInfo } = portfolioData;
 
   return (
     <DocumentSection title="PERSONAL INFORMATION" classified={true}>
-      <div className="flex gap-6">
+      <div className="flex flex-col md:flex-row gap-6">
         {/* Profile Photo Section */}
         <div className="flex-shrink-0">
           <div className="w-32 h-32 border-2 border-primary bg-card relative overflow-hidden">
             <RedactedText className="w-full h-full block">
-              <img 
-                src={personalInfo.logo} 
-                alt="Agent Profile Photo" 
-                className="w-full h-full object-cover"
-              />
+              <Avatar className="w-full h-full">
+                <AvatarImage 
+                  src={personalInfo.logo} 
+                  alt="Agent Profile Photo" 
+                  className="object-cover"
+                />
+                <AvatarFallback className="text-xl">ES</AvatarFallback>
+              </Avatar>
             </RedactedText>
             <div className="absolute bottom-0 left-0 right-0 bg-primary text-primary-foreground text-xs text-center py-1">
               AGENT PHOTO

@@ -11,7 +11,7 @@ export const ExperienceSection = () => {
       <div className="space-y-6">
         {experience.map((exp) => (
           <div key={exp.id} className="border border-border p-4 bg-muted/5">
-            <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center justify-between mb-3 flex-col md:flex-row gap-4">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 border border-border bg-card overflow-hidden flex items-center justify-center">
                   <RedactedText className="w-full h-full block">
