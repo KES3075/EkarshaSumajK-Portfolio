@@ -1,73 +1,176 @@
-# Welcome to your Lovable project
+# TOP SECRET // NOFORN // ORCON
 
-## Project info
+## CLASSIFIED PERSONNEL FILE - EKARSHA SUMAJ K
 
-**URL**: https://lovable.dev/projects/1410c3d0-ed61-465b-a8bd-1092188c4666
+### SECURITY CLASSIFICATION: TOP SECRET
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 📋 **CLASSIFIED PERSONNEL DOSSIER**
 
-**Use Lovable**
+**AGENT PROFILE:** Ekarsha Sumaj Kotikalapoodi (KES)
+**CLEARANCE LEVEL:** ALPHA-7 VERIFIED
+**SECURITY CLASSIFICATION:** TOP SECRET // NOFORN // ORCON
+**NEURAL SCAN:** ACTIVE
+**DOCUMENT STATUS:** CLASSIFIED
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1410c3d0-ed61-465b-a8bd-1092188c4666) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🎯 **MISSION BRIEFING**
 
-**Use your preferred IDE**
+This classified portfolio represents a cutting-edge software engineering operative specializing in modern web technologies, cloud platforms, and AI/ML integration. Currently deployed at Fixity Learning Pad, building scalable educational solutions that support predictive analytics and automated workflows.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### **CORE COMPETENCIES:**
+- **Frontend Operations:** React.js, Next.js, TypeScript
+- **Backend Intelligence:** Node.js, FastAPI, Python, PostgreSQL, MongoDB
+- **Cloud Infrastructure:** AWS, Azure, Docker, Kubernetes
+- **AI Integration:** Machine Learning, Neural Networks, Automated Workflows
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🛡️ **CLASSIFIED FEATURES**
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### **Security Clearance System**
+- **Interactive Neural Scan:** Simulate biometric verification with progress tracking
+- **Clearance Levels:** CONFIDENTIAL → SECRET → TOP SECRET → ALPHA-7
+- **Real-time Monitoring:** All access attempts logged and tracked
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### **Redaction Protocol**
+- **Hover Declassification:** Classified information revealed on mouse interaction
+- **Security Scanning:** Visual feedback during information disclosure
+- **Access Control:** Content protection with Executive Order 13526 compliance
 
-# Step 3: Install the necessary dependencies.
-npm i
+### **Dark Mode Intelligence**
+- **Security Lighting Toggle:** Switch between standard and military green illumination
+- **Adaptive UI:** Automatic theme detection and preference storage
+- **Enhanced Readability:** Optimized contrast for classified document viewing
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### **Responsive Operations**
+- **Mobile Deployment:** Optimized for field operations on all devices
+- **Adaptive Layout:** Dynamic component positioning based on screen size
+- **Touch Interface:** Enhanced controls for tactical environments
+
+---
+
+## 🏗️ **TECHNICAL SPECIFICATIONS**
+
+**Development Stack:**
+- **Frontend:** React 18, TypeScript, Tailwind CSS
+- **UI Framework:** Shadcn/ui, Radix UI Components
+- **Build Tool:** Vite 5.4.19
+- **State Management:** React Query, Context API
+- **Routing:** React Router DOM
+- **Styling:** Tailwind CSS with custom design system
+- **Theme System:** Next-themes for dark/light mode
+- **Icons:** Lucide React
+
+**Security Features:**
+- **CSP Compliance:** Content Security Policy implementation
+- **Access Logging:** Comprehensive user interaction tracking
+- **Data Protection:** Secure handling of classified information
+- **Print Security:** Watermarking and copy protection
+
+---
+
+## 🚀 **DEPLOYMENT PROTOCOL**
+
+### **Local Development Setup**
+
+**Prerequisites:**
+- Node.js & npm (install with nvm)
+- Security clearance for classified access
+
+**Installation Steps:**
+
+```bash
+# Clone classified repository
+git clone <CLASSIFIED_REPOSITORY_URL>
+
+# Navigate to secure directory
+cd <PROJECT_DIRECTORY>
+
+# Install intelligence packages
+npm install
+
+# Activate development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+**Access Point:** `http://localhost:8080/`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### **Production Deployment**
 
-**Use GitHub Codespaces**
+**Authorized Deployment Methods:**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. **Lovable Platform:**
+   - Visit [Classified Project Portal](https://lovable.dev/projects/1410c3d0-ed61-465b-a8bd-1092188c4666)
+   - Execute Share → Publish protocol
 
-## What technologies are used for this project?
+2. **Custom Domain Integration:**
+   - Navigate to Project Settings → Domains
+   - Execute domain connection sequence
+   - Reference: [Custom Domain Configuration](https://docs.lovable.dev/tips-tricks/custom-domain)
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📊 **INTELLIGENCE ASSETS**
 
-## How can I deploy this project?
+### **Current Operations:**
+- **Primary Mission:** Full Stack Web Development at Fixity Learning Pad
+- **Specialization:** AI-powered educational platforms
+- **Clearance Level:** ALPHA-7 (Maximum Security Access)
+- **Status:** ACTIVE
 
-Simply open [Lovable](https://lovable.dev/projects/1410c3d0-ed61-465b-a8bd-1092188c4666) and click on Share -> Publish.
+### **Technical Capabilities:**
+- **Frontend:** React, Next.js, TypeScript, Tailwind CSS
+- **Backend:** Node.js, Express, FastAPI, Python
+- **Database:** PostgreSQL, MongoDB, MySQL
+- **DevOps:** Docker, Kubernetes, CI/CD pipelines
+- **Cloud:** AWS, Azure, Firebase
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## 🔒 **SECURITY CLEARANCE REQUIREMENTS**
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### **Access Protocols:**
+- **Level 1 (CONFIDENTIAL):** Basic portfolio information
+- **Level 2 (SECRET):** Technical project details
+- **Level 3 (TOP SECRET):** Complete project specifications
+- **Level 4 (ALPHA-7):** Full system access and classified intelligence
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### **Authentication Methods:**
+- **Biometric Scan:** Neural pattern recognition
+- **Security Questions:** Clearance level verification
+- **Behavioral Analysis:** User interaction monitoring
+- **Temporal Validation:** Session-based access control
+
+---
+
+## 📞 **COMMUNICATIONS**
+
+**Secure Channels:**
+- **GitHub:** [Classified Repository](https://github.com/EkarshaSumajK)
+- **LinkedIn:** [Professional Network](https://www.linkedin.com/in/ekarshasumajk)
+- **Portfolio:** [Live Operations](https://ekarsha-sumaj-k-portfolio.vercel.app/)
+
+**Emergency Contact:**
+- **Email:** ekarshaksumaj@gmail.com
+- **Phone:** +91 9419418611099
+- **Status:** ACTIVE
+
+---
+
+## ⚠️ **CLASSIFIED INFORMATION NOTICE**
+
+**WARNING:** This document contains classified information protected under Executive Order 13526 and the Espionage Act of 1917. Unauthorized access, disclosure, or reproduction is prohibited and may result in severe penalties.
+
+**SECURITY NOTICE:** All access attempts are logged and monitored. Hover over redacted sections to reveal classified content.
+
+---
+
+**END OF DOCUMENT**
+**CLASSIFICATION LEVEL: TOP SECRET**
+**DOCUMENT #: EK-2024-001**
+**REVISION: 8/30/2025**
+**ORIGIN: LANGLEY, VA**
+**DERIVED FROM: MULTIPLE SOURCES**
