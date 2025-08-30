@@ -23,9 +23,9 @@ export const DocumentSection = ({ title, children, classified = true, className 
 
 export const FormField = ({ label, children }: { label: string; children: React.ReactNode }) => {
   return (
-    <div className="flex items-center mb-2">
-      <span className="w-32 font-semibold uppercase text-xs tracking-wide">{label}:</span>
-      <div className="form-field flex-1 min-h-[1.5rem] flex items-center">
+    <div className="flex flex-col sm:flex-row sm:items-center mb-2 gap-1 sm:gap-0">
+      <span className="w-full sm:w-32 font-semibold uppercase text-xs tracking-wide flex-shrink-0">{label}:</span>
+      <div className="form-field flex-1 min-h-[1.5rem] flex items-start sm:items-center break-all sm:break-normal">
         {children}
       </div>
     </div>

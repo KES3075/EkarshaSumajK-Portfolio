@@ -8,22 +8,25 @@ interface RedactedTextProps {
 
 export const RedactedText = ({ children, className = "", revealOnHover = true }: RedactedTextProps) => {
   const [isRevealed, setIsRevealed] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const handleMouseEnter = () => {
     if (revealOnHover) {
-      setIsRevealed(true);
+      setIsAnimating(true);
+      setTimeout(() => setIsRevealed(true), 100);
     }
   };
 
   const handleMouseLeave = () => {
     if (revealOnHover) {
       setIsRevealed(false);
+      setTimeout(() => setIsAnimating(false), 300);
     }
   };
 
   return (
     <span
-      className={`relative inline-block ${className}`}
+      className={`relative inline-block cursor-pointer ${className}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -37,8 +40,12 @@ export const RedactedText = ({ children, className = "", revealOnHover = true }:
       <span
         className={`absolute inset-0 transition-all duration-300 ${
           isRevealed ? 'bg-transparent' : 'bg-redaction-bar'
-        }`}
+        } ${isAnimating && !isRevealed ? 'security-scan' : ''}`}
       />
+      {/* Security clearance effect */}
+      {isAnimating && (
+        <span className="absolute inset-0 bg-accent/20 animate-pulse" />
+      )}
     </span>
   );
 };

@@ -62,16 +62,16 @@ export const PersonalInfoSection = () => {
         </FormField>
         
         <FormField label="GITHUB">
-        <a 
-              href={personalInfo.github} 
-              target="_blank" 
+        <a
+              href={personalInfo.github}
+              target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-accent transition-colors"
+              className="flex items-center gap-2 hover:text-accent transition-colors break-all"
             >
           <RedactedText>
             <div className="flex items-center gap-2 hover:text-accent transition-colors">
               <Github size={14} />
-              {personalInfo.github}
+              <span className="break-all">{personalInfo.github}</span>
               <ExternalLink size={12} />
             </div>
             </RedactedText>
@@ -79,38 +79,38 @@ export const PersonalInfoSection = () => {
         </FormField>
         
         <FormField label="LINKEDIN">
-          <a 
-              href={personalInfo.linkedin} 
-              target="_blank" 
+          <a
+              href={personalInfo.linkedin}
+              target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-accent transition-colors"
+              className="flex items-center gap-2 hover:text-accent transition-colors break-all"
             >
             <RedactedText>
             <div className="flex items-center gap-2 hover:text-accent transition-colors">
               <Linkedin size={14} />
-              {personalInfo.linkedin}
+              <span className="break-all">{personalInfo.linkedin}</span>
               <ExternalLink size={12} />
             </div>
             </RedactedText>
             </a>
-          
+
         </FormField>
         
         <FormField label="PORTFOLIO">
-          <a 
-              href={personalInfo.portfolio} 
-              target="_blank" 
+          <a
+              href={personalInfo.portfolio}
+              target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-accent transition-colors"
+              className="flex items-center gap-2 hover:text-accent transition-colors break-all"
             >
             <RedactedText>
             <div className="flex items-center gap-2 hover:text-accent transition-colors">
-              {personalInfo.portfolio}
+              <span className="break-all">{personalInfo.portfolio}</span>
               <ExternalLink size={12} />
             </div>
             </RedactedText>
             </a>
-          
+
         </FormField>
         
         <div className="border-t border-border pt-3 mt-4">

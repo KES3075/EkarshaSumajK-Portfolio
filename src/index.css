@@ -57,41 +57,50 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark CIA Document Theme - Military Green/Security Lighting */
+    --background: 120 20% 8%; /* Dark military green/black */
+    --foreground: 120 15% 85%; /* Muted green text */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 120 15% 12%; /* Slightly lighter military green */
+    --card-foreground: 120 15% 85%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 120 15% 12%;
+    --popover-foreground: 120 15% 85%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 120 30% 60%; /* Bright military green */
+    --primary-foreground: 120 20% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 120 10% 20%; /* Dark green accent */
+    --secondary-foreground: 120 15% 85%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 120 8% 25%; /* Security clearance gray */
+    --muted-foreground: 120 10% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 0 65% 50%; /* Maintain red for classifications */
+    --accent-foreground: 120 20% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 120 20% 8%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 120 10% 25%;
+    --input: 120 15% 12%;
+    --ring: 120 30% 60%;
+
+    /* Custom classified colors for dark mode */
+    --classified-red: 0 65% 50%;
+    --redaction-bar: 120 20% 15%;
+    --document-bg: 120 20% 8%;
+    --stamp-red: 0 70% 50%;
+
+    /* Sidebar colors for dark mode */
+    --sidebar-background: 120 15% 10%;
+    --sidebar-foreground: 120 15% 85%;
+    --sidebar-primary: 120 30% 60%;
+    --sidebar-primary-foreground: 120 20% 8%;
+    --sidebar-accent: 120 10% 20%;
+    --sidebar-accent-foreground: 120 15% 85%;
+    --sidebar-border: 120 10% 25%;
+    --sidebar-ring: 120 30% 60%;
   }
 }
 
@@ -102,10 +111,40 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-mono;
-    background-image: 
+    background-image:
       linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
       linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
     background-size: 20px 20px;
+  }
+
+  /* Dark mode security grid */
+  .dark body {
+    background-image:
+      linear-gradient(rgba(120, 255, 120, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(120, 255, 120, 0.03) 1px, transparent 1px),
+      radial-gradient(circle at 20% 20%, rgba(120, 255, 120, 0.02) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(0, 255, 0, 0.01) 0%, transparent 50%);
+    background-size: 25px 25px, 25px 25px, 200px 200px, 150px 150px;
+    background-attachment: fixed;
+  }
+
+  /* Watermark effect */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='200' y='200' font-family='monospace' font-size='12' fill='%23000' fill-opacity='0.02' text-anchor='middle' transform='rotate(-45 200 200)'%3ETOP SECRET%3C/text%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    z-index: -1;
+  }
+
+  .dark body::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='200' y='200' font-family='monospace' font-size='12' fill='%2378FF78' fill-opacity='0.03' text-anchor='middle' transform='rotate(-45 200 200)'%3ECLASSIFIED%3C/text%3E%3C/svg%3E");
   }
 }
 
@@ -165,27 +204,173 @@ All colors MUST be HSL.
   }
   
   .form-field {
-    @apply border border-border px-2 py-1 bg-transparent;
+    @apply border border-border px-2 py-1 bg-transparent break-words;
+  }
+
+  .form-field a {
+    @apply break-all;
+  }
+
+  .form-field span {
+    @apply break-words;
   }
   
-  /* Custom animations */
+  /* Enhanced animations */
   @keyframes typewriter {
-    from { width: 0; }
-    to { width: 100%; }
+    from {
+      width: 0;
+      border-right: 2px solid hsl(var(--primary));
+    }
+    to {
+      width: 100%;
+      border-right: 2px solid transparent;
+    }
   }
-  
+
   @keyframes declassify {
     0% {
       background-color: hsl(var(--redaction-bar));
       color: transparent;
+      transform: translateY(2px);
+    }
+    50% {
+      background-color: hsl(var(--accent));
+      color: transparent;
+      transform: translateY(0px);
     }
     100% {
       background-color: transparent;
       color: hsl(var(--foreground));
+      transform: translateY(0px);
     }
   }
-  
+
+  @keyframes security-scan {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  @keyframes hologram {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes redaction-reveal {
+    0% {
+      background-color: hsl(var(--redaction-bar));
+      color: transparent;
+      box-shadow: inset 0 0 0 0 hsl(var(--accent));
+    }
+    50% {
+      background-color: hsl(var(--accent));
+      box-shadow: inset 0 0 10px 2px hsl(var(--accent));
+    }
+    100% {
+      background-color: transparent;
+      color: hsl(var(--foreground));
+      box-shadow: inset 0 0 0 0 transparent;
+    }
+  }
+
+  .typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter 2s steps(40, end) forwards;
+    border-right: 2px solid hsl(var(--primary));
+  }
+
   .declassify-animation {
-    animation: declassify 0.6s ease-out forwards;
+    animation: declassify 0.8s ease-out forwards;
+  }
+
+  .security-scan {
+    background: linear-gradient(90deg, transparent, hsl(var(--primary)), transparent);
+    background-size: 200% 100%;
+    animation: security-scan 3s infinite;
+  }
+
+  .hologram-effect {
+    animation: hologram 3s ease-in-out infinite;
+    background: linear-gradient(45deg, hsl(var(--primary)), transparent, hsl(var(--accent)));
+    background-size: 200% 200%;
+  }
+
+  .redaction-reveal {
+    animation: redaction-reveal 1s ease-out forwards;
+  }
+
+  /* Print styles for CIA document */
+  @media print {
+    .document-page {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .classified-stamp,
+    .top-secret-stamp {
+      border: 2px solid #000 !important;
+      background: #fff !important;
+      color: #000 !important;
+    }
+
+    /* Hide interactive elements when printing */
+    .security-scan,
+    .hologram-effect {
+      display: none !important;
+    }
+
+    /* Ensure redacted text is visible when printed */
+    .redacted {
+      background: #000 !important;
+      color: transparent !important;
+    }
+
+    /* Print-specific watermarks */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='100' y='100' font-family='monospace' font-size='8' fill='%23000' fill-opacity='0.05' text-anchor='middle' transform='rotate(-45 100 100)'%3ETOP SECRET - DO NOT COPY%3C/text%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 150px 150px;
+      z-index: -1;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .classified-stamp,
+    .top-secret-stamp {
+      border-width: 3px;
+      font-weight: 900;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .typewriter,
+    .declassify-animation,
+    .security-scan,
+    .hologram-effect,
+    .redaction-reveal {
+      animation: none;
+    }
+
+    * {
+      transition-duration: 0.01ms !important;
+    }
   }
 }

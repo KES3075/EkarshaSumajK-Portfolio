@@ -4,44 +4,15 @@ import { ExperienceSection } from '@/components/ExperienceSection';
 import { ProjectsSection } from '@/components/ProjectsSection';
 import { EducationSection } from '@/components/EducationSection';
 import { CertificationsSection } from '@/components/CertificationsSection';
-import { ClassifiedStamp } from '@/components/RedactedText';
+import { CIADocumentHeader } from '@/components/CIADocumentHeader';
+import { AlertTriangle } from 'lucide-react';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background p-4 md:p-8">
+    <div className="min-h-screen bg-background p-2 sm:p-4 md:p-8">
       <div className="max-w-4xl mx-auto">
-        {/* Document Header */}
-        <header className="document-page p-4 md:p-8 mb-8">
-          <div className="flex flex-col md:flex-row items-center md:items-start justify-between mb-6 gap-4">
-            <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
-              <div className="w-16 h-16 border-2 border-primary rounded-full flex items-center justify-center">
-                <span className="text-2xl font-bold">CIA</span>
-              </div>
-              <div>
-                <h1 className="document-title mb-0 border-0 p-0">
-                  KES
-                </h1>
-                <p className="text-sm mt-2">
-                  SECURITY CLASSIFICATION: TOP SECRET
-                </p>
-              </div>
-            </div>
-            <div className="text-center md:text-right">
-              <ClassifiedStamp text="TOP SECRET" />
-              <p className="text-xs mt-2">DOC #: EK-2024-001</p>
-              <p className="text-xs">REV: {new Date().toLocaleDateString()}</p>
-            </div>
-          </div>
-          
-          <div className="border-t border-primary pt-4">
-            <p className="text-sm text-center uppercase tracking-wider">
-              ⚠️ UNAUTHORIZED ACCESS PROHIBITED ⚠️
-            </p>
-            <p className="text-xs text-center mt-2">
-              This document contains classified information. Hover over redacted sections to reveal content.
-            </p>
-          </div>
-        </header>
+        {/* Enhanced CIA Document Header */}
+        <CIADocumentHeader />
 
         {/* Portfolio Sections */}
         <div className="space-y-8">
@@ -53,14 +24,57 @@ const Index = () => {
           <CertificationsSection />
         </div>
 
-        {/* Document Footer */}
-        <footer className="document-page p-4 md:p-6 mt-8 text-center">
-          <p className="text-xs">
-            END OF DOCUMENT - CLASSIFICATION LEVEL: TOP SECRET
-          </p>
-          <p className="text-xs mt-2">
-            This portfolio was generated using classified document protocols.
-          </p>
+        {/* Enhanced Document Footer */}
+        <footer className="document-page p-4 md:p-6 mt-8 relative overflow-hidden">
+          {/* Footer Security Pattern */}
+          <div className="absolute inset-0 border-t-2 border-primary/20 pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+
+          <div className="relative z-10">
+            {/* Classification Footer */}
+            <div className="text-center mb-4">
+              <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 px-4 py-2 rounded">
+                <AlertTriangle size={14} className="text-accent" />
+                <span className="text-sm font-bold text-accent uppercase tracking-widest">
+                  TOP SECRET // NOFORN // ORCON
+                </span>
+                <AlertTriangle size={14} className="text-accent" />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center text-xs">
+              <div>
+                <p className="font-mono">END OF DOCUMENT</p>
+                <p className="font-mono opacity-75">CLASSIFICATION: TOP SECRET</p>
+              </div>
+
+              <div>
+                <p className="font-mono">PAGE 1 OF 1</p>
+                <p className="font-mono opacity-75">TOTAL PAGES: 1</p>
+              </div>
+
+              <div>
+                <p className="font-mono">ACCESS LOGGED</p>
+                <p className="font-mono opacity-75">SESSION: {new Date().toISOString().split('T')[0]}</p>
+              </div>
+            </div>
+
+            <div className="mt-4 pt-4 border-t border-border/50">
+              <p className="text-xs text-center opacity-75">
+                This classified document was generated using advanced neural network protocols.
+                All content is protected under Executive Order 13526 and the Espionage Act of 1917.
+              </p>
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-6 mt-2 text-xs opacity-50">
+                <span>CONFIDENTIAL</span>
+                <span className="hidden sm:inline">•</span>
+                <span>SECRET</span>
+                <span className="hidden sm:inline">•</span>
+                <span>TOP SECRET</span>
+                <span className="hidden sm:inline">•</span>
+                <span>ALPHA-7</span>
+              </div>
+            </div>
+          </div>
         </footer>
       </div>
     </div>
