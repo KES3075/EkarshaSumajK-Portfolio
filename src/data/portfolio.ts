@@ -8,7 +8,7 @@ export const portfolioData = {
     github: "https://github.com/EkarshaSumajK",
     linkedin: "https://www.linkedin.com/in/ekarshasumajk",
     portfolio: "https://ekarsha-sumaj-k-portfolio.vercel.app/",
-    logo:"https://media.licdn.com/dms/image/v2/D5603AQHf6AykXKMNDQ/profile-displayphoto-scale_400_400/B56ZisjCF8H0Ag-/0/1755241522745?e=1758153600&v=beta&t=10as86kg-711LuP5wfsbwEz9HDovyVk9w8o5jTehqIw"
+    logo:"https://avatars.githubusercontent.com/u/143759943?v=4"
   },
   skills: [
     { id: "1", name: "React.js", category: "Frontend" },

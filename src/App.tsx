@@ -6,8 +6,28 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import LoadingPage from "./components/LoadingPage";
+import { useUserData } from "./hooks/useUserData";
 
 const queryClient = new QueryClient();
+
+const AppContent = () => {
+  const { isLoading, handleLoadingComplete } = useUserData();
+
+  if (isLoading) {
+    return <LoadingPage onComplete={handleLoadingComplete} />;
+  }
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -20,13 +40,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
+        <AppContent />
       </TooltipProvider>
     </ThemeProvider>
   </QueryClientProvider>

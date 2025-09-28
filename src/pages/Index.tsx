@@ -5,14 +5,21 @@ import { ProjectsSection } from '@/components/ProjectsSection';
 import { EducationSection } from '@/components/EducationSection';
 import { CertificationsSection } from '@/components/CertificationsSection';
 import { CIADocumentHeader } from '@/components/CIADocumentHeader';
+import UserDataDisplay from '@/components/UserDataDisplay';
+import { useUserData } from '@/hooks/useUserData';
 import { AlertTriangle } from 'lucide-react';
 
 const Index = () => {
+  const { userData } = useUserData();
+
   return (
     <div className="min-h-screen bg-background p-2 sm:p-4 md:p-8">
       <div className="max-w-4xl mx-auto">
         {/* Enhanced CIA Document Header */}
         <CIADocumentHeader />
+
+        {/* User Data Display */}
+        {/* <UserDataDisplay userData={userData} /> */}
 
         {/* Portfolio Sections */}
         <div className="space-y-8">
